@@ -2233,7 +2233,7 @@ var JsonEncoder = {
  *
  */
 
-var wsProtocol = typeof window !== 'undefined' && window.location.protocol === 'https:' ? 'wss' : 'ws';
+var wsProtocol = window.location && window.location.protocol === 'https:' ? 'wss' : 'ws';
 /**
  * Connection class is used to make a TCP/Socket connection
  * with the server. It relies on Native Websocket browser
